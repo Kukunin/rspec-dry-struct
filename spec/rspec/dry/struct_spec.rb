@@ -41,7 +41,7 @@ describe RSpec::Dry::Struct do
     end
 
     it { is_expected.not_to have_attribute(:last_name) }
-    it { is_expected.not_to have_attribute(:first_name, Types::Int) }
+    it { is_expected.not_to have_attribute(:first_name, Types::Integer) }
 
     it 'has message on negated failure' do
       expect { is_expected.not_to have_attribute(:first_name) }
