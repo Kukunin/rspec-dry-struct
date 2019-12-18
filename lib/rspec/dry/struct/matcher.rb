@@ -11,7 +11,11 @@ module RSpec
 
         def matches?(actual)
           @actual = actual
-          @actual_attribute = actual.schema[@attr_name]
+          attribute = actual.schema.find do |attr|
+            attr.name == @attr_name
+          end
+          @actual_attribute = attribute.type if attribute
+
           attr_present? && correct_attr_type?
         end
 

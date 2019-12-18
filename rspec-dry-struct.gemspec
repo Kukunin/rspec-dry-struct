@@ -22,6 +22,7 @@ Gem::Specification.new do |spec|
 
   spec.add_runtime_dependency 'rspec'
   spec.add_runtime_dependency 'dry-struct'
+  spec.add_runtime_dependency 'dry-types', '>= 0.15.0'
 
   spec.add_development_dependency 'bundler'
   spec.add_development_dependency 'rspec-its'
